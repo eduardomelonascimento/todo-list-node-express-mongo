@@ -25,8 +25,6 @@ app.use('/checklists', checkListRouter);
 app.use('/checklists', taskRouter.checklistDependent);
 app.use('/tasks', taskRouter.simpleRouter);
 
-const port = process.env.PORT || 3000;
-
-app.listen(port, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Server started');
 });
